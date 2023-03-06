@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio using html css</title>
+<style type="text/css">
+    *{padding: 0; margin: 0; box-sizing: border-box;}
+    header{
+        width: 100%;
+        height: 100vh;
+        font-family: sans-serif;
+    }
+    nav{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo{
+        font-size: 2em;
+    }
+    .logo span{
+        color: skyblue;
+    }
+    .menu a{
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 20px;
+        position: relative;
+    }
+    .menu a:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-top: 2px solid black;
+        z-index: 1;
+        transition: 0.4s linear;
+    }
+    .menu a:hover:before{
+        width: 90%;
+    }
+    .sub a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background: red;
+        border-radius: 8px;
+        transition: 0.4s;
+}
+.sub a:hover{
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+}
+.h-text{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.h-text h1{
+    font-size: 3em;
+}
+.h-text a{
+    text-decoration: none;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 1;
+}
+.h-text a:before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: skyblue;
+    z-index: -1;
+    border: 1px solid black;
+}
+#man{
+    position: absolute;
+    bottom: 0;
+    left: 600px;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            Work<span>With Me</span>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Skils</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+        </div>
+        <div class="sub">
+            <a href="#">Subscribe</a>
+        </div>
+    </nav>
+    <section class="h-text">
+        <div class="left">
+            <p>Hi I'm Amit !</p>
+        <h1>Front End Deve<span style="color:skyblue">loper</span></h1>
+        <p>I Design and Develop Websites !</p>
+        <br>                    <br>
+        <a href="#">Download Resume</a>
+        </div>
+        <div class="right">
+            <img src="Port.jpg" width="500">
+        </div>
+    </section>
+    <img src="guitar.gif" width="200" id="man">
+</header>   
+</body>
+</html>
